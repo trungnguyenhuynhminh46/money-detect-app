@@ -5,6 +5,7 @@ import pickle
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 from keras.applications.vgg16 import VGG16
+from tensorflow import keras
 from keras.layers import Input, Flatten, Dense, Dropout
 from keras.models import Model
 from keras.callbacks import ModelCheckpoint
