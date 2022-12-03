@@ -1,6 +1,6 @@
-tensorflow==2.11.0
+tensorflow
 tensorflow_intel
-keras==2.11.0
+keras
 matplotlib==3.6.2
 numpy==1.23.5
 opencv_python_headless==4.6.0.66
