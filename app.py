@@ -66,7 +66,7 @@ class Faceemotion(VideoProcessorBase):
             cv2.putText(origin_img, class_name[np.argmax(predict)], org, font,
                         fontScale, color, thickness, cv2.LINE_AA)
 
-        cv2.imshow("Picture", origin_img)
+        # cv2.imshow("Picture", origin_img)
         return av.VideoFrame.from_ndarray(origin_img, format="bgr24")
 
 def main():
