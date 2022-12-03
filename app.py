@@ -1,18 +1,9 @@
 from os import listdir
 import cv2
 import numpy as np
-import pickle
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.model_selection import train_test_split
 from keras.applications.vgg16 import VGG16
-from tensorflow import keras
 from keras.layers import Input, Flatten, Dense, Dropout
 from keras.models import Model
-from keras.callbacks import ModelCheckpoint
-import matplotlib.pyplot as plt
-import random
-from keras.models import  load_model
-import sys
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
 class_name = ['00000','1000 VND','10.000 VND','100.000 VND','2000 VND','20.000 VND','5000 VND','50.000 VND','500.000 VND']
