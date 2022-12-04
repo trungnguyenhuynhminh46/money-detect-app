@@ -72,7 +72,7 @@ class Faceemotion(VideoProcessorBase):
 def main():
     # Face Analysis Application #
     st.title("Money detect app")
-    activities = ["About", "Webcam Face Detection"]
+    activities = ["About", "Money Detection"]
     choice = st.sidebar.selectbox("Select Activity", activities)
     if choice == "About":
         st.subheader("About this app")
@@ -85,20 +85,27 @@ def main():
         st.markdown(html_temp_about1, unsafe_allow_html=True)
 
         html_temp4 = """
+                                    <div style="background-color:#98AFC7;padding:10px;margin-bottom:20px">
+                             		<h4 style="color:white;text-align:center;">
+                                        Project cuối kỳ môn học xử lý ảnh
+                                        <br>
+                                        GVHD: ThS.Trần Tiến Đức
+                                    </h4>
+                             		</div>
                              		<div style="background-color:#98AFC7;padding:10px">
                              		<h4 style="color:white;text-align:center;">
                                         Nguyễn Huỳnh Minh Trung MSSV: 19133061
+                                        <br>
                                         Nguyễn Thế Ngọc MSSV: 19133040
                                     </h4>
-                             		<h4 style="color:white;text-align:center;">Thanks for Visiting</h4>
                              		</div>
                              		<br></br>
                              		<br></br>"""
 
         st.markdown(html_temp4, unsafe_allow_html=True)
-    elif choice == "Webcam Face Detection":
+    elif choice == "Money Detection":
         st.header("Webcam Live Feed")
-        st.write("Click on start to use webcam and detect your face emotion")
+        st.write("Click on start to use webcam and detect your money")
         webrtc_streamer(key="example", mode=WebRtcMode.SENDRECV, rtc_configuration=RTC_CONFIGURATION,
                         video_processor_factory=Faceemotion)
     else:
